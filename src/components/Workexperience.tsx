@@ -3,9 +3,9 @@ import { FaBriefcase, FaGraduationCap } from 'react-icons/fa'
 export default function ExperienceEducation() {
   const experiences = [
     {
-      title: "Software Developer",
+      title: "Internship",
       company: "JN Data",
-      period: "October 2023 – March 2024",
+      period: "October 2023 – February 2024",
       details: [
         "Developed a robust MVC web application using C# in the .NET Framework, integrating Azure Database and Azure Active Directory for seamless data management.",
         "Gathered and processed data through REST APIs, ensuring efficient data flow and functionality.",
