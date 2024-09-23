@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import profilePic from '@/public/Me.jpg'
-import backgroundImage from '@/public/background7.jpg' // Make sure to add your background image
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, FaGithub } from 'react-icons/fa'
+import profilePic from '@/public/static/Me.jpg'
+import backgroundImage from '@/public/static/background7.jpg' 
+import { FaLinkedinIn,FaGithub } from 'react-icons/fa'
 
 export default function Hero() {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import WorkinProgress from '@/public/Workinprogress.jpg'
+import WorkinProgress from '@/public/static/Workinprogress.jpg'
 
 export default function Portfolio() {
   const projects = [
