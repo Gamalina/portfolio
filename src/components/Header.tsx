@@ -13,9 +13,12 @@ export default function Header() {
   return (
     <header className="p-5 flex justify-between items-center bg-gray-800">
       <div className="text-2xl font-bold text-yellow-500">DC</div>
-      <nav className="flex-grow flex justify-center space-x-8">
-        <Link href="#about" className={`hover:text-yellow-500 transition-colors pb-1 ${isActive('#about') ? 'border-b-2 border-yellow-500' : ''}`}>
-          About
+      <nav className="flex-grow flex justify-end space-x-8">
+        <Link href="#workexperience" className={`hover:text-yellow-500 transition-colors pb-1 ${isActive('#about') ? 'border-b-2 border-yellow-500' : ''}`}>
+          Experience
+        </Link>
+        <Link href="#skills" className={`hover:text-yellow-500 transition-colors pb-1 ${isActive('#about') ? 'border-b-2 border-yellow-500' : ''}`}>
+          Skills
         </Link>
         <Link
           href="#portfolio"

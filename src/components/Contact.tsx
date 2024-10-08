@@ -21,11 +21,9 @@ export default function Contact() {
               <a href="https://github.com/Gamalina" className="text-2xl hover:text-yellow-500 transition-colors" aria-label="GitHub">
                 <FaGithub />
               </a>
-              <a href="tel:+4524761197" className="text-2xl hover:text-yellow-500 transition-colors" aria-label="WhatsApp">
-                <FaWhatsapp />
-              </a>
             </div>
-            <p className="text-gray-400">Feel free to reach out to me through any of these platforms. I'm always open to new opportunities and collaborations!</p>
+            <p className="text-gray-400">Feel free to reach out to me through any of these platforms.</p>
+            <p className="text-gray-400">I'm always open to new opportunities and collaborations!</p>
           </div>
         </div>
       </div>
