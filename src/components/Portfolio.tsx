@@ -14,7 +14,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4 text-center">Portfolio</h2>
-        <h4 className="text-1xl font-bold mb-4 text-center">Work in Progress! As I have worked mainly with Back-end there are no GUI's in these projects.</h4>
+        <h4 className="text-1xl font-bold mb-4 text-center">Work in Progress! As I have worked mainly with Back-end there are no GUI&apos;s in these projects.</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <div

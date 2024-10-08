@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Content */}
       <div className="md:w-1/2 z-10">
         <h1 className="text-4xl font-bold mb-4 text-white">
-          I'm <span className="text-yellow-500">Daniel Rud Callesen</span> a passionate <span className="text-yellow-500">Software Developer</span>
+          I&apos;m <span className="text-yellow-500">Daniel Rud Callesen</span> a passionate <span className="text-yellow-500">Software Developer</span>
         </h1>
         <p className="text-lg mb-6 lg:w-[90%] text-white">
           A dedicated and enthusiastic Software Developer with experience in C# development and cloud technologies. Proficient in

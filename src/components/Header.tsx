@@ -1,11 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 export default function Header() {
-  const router = useRouter()
   const pathname = usePathname()
   useSmoothScroll()
 

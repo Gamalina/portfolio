@@ -1,5 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import ContactForm from './Contactform'
 
 export default function Contact() {
@@ -23,7 +22,7 @@ export default function Contact() {
               </a>
             </div>
             <p className="text-gray-400">Feel free to reach out to me through any of these platforms.</p>
-            <p className="text-gray-400">I'm always open to new opportunities and collaborations!</p>
+            <p className="text-gray-400">I&apos;m always open to new opportunities and collaborations!</p>
           </div>
         </div>
       </div>

@@ -38,6 +38,7 @@ export default function ContactForm() {
         throw new Error('Failed to send message')
       }
     } catch (error) {
+      console.log(error)
       setToast({ message: "Failed to send message. Please try again later.", type: 'error' })
     } finally {
       setIsSubmitting(false)
