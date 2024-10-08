@@ -1,17 +1,20 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import Skills from '@/components/Skills'
-import Portfolio from '@/components/Portfolio'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
-import Workexperience from '@/components/Workexperience'
+import dynamic from 'next/dynamic'
+
+const Header = dynamic(() => import('@/components/Header'))
+const Hero = dynamic(() => import('@/components/Hero'))
+const Skills = dynamic(() => import('@/components/Skills'))
+const Portfolio = dynamic(() => import('@/components/Portfolio'))
+const Contact = dynamic(() => import('@/components/Contact'))
+const Footer = dynamic(() => import('@/components/Footer'))
+const WorkExperience = dynamic(() => import('@/components/WorkExperience'))
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
-      <Workexperience />
+      <WorkExperience />
       <Skills />
       <Portfolio />
       <Contact />

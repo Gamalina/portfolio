@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+interface Skill {
+  name: string;
+  icon: string;
+  link: string;
+}
 export default function Skills() {
-  const skills = [
+  const skills : Skill[] = [
     { name: 'C#', icon: 'https://private-user-images.githubusercontent.com/5116133/357008418-1baef3a3-8aa6-450c-b517-3cca25c1ae26.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY4Mjc2NzEsIm5iZiI6MTcyNjgyNzM3MSwicGF0aCI6Ii81MTE2MTMzLzM1NzAwODQxOC0xYmFlZjNhMy04YWE2LTQ1MGMtYjUxNy0zY2NhMjVjMWFlMjYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDkyMCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDA5MjBUMTAxNjExWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OTE0ZTAzMWY4ZjY1NmZhZDRiOGM0Zjk2MDA5N2FiZjI3OGFjMDIxODcxYzFmZTc3NTUzZjY5MmI5ZjQ3NzRkOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.wTYA_9Wrlcl0S6uJbJCFdNaJUs1mAYSh_Jm3YKp8I5c', link: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
     { name: 'ASP.NET', icon: 'https://raw.githubusercontent.com/dotnet/brand/main/logo/dotnet-logo.png', link: 'https://dotnet.microsoft.com/en-us/apps/aspnet' },
     { name: 'Restful API', icon: 'https://cdn0.iconfinder.com/data/icons/buno-api/32/api_interface_settings-512.png', link: 'https://www.ibm.com/topics/rest-apis' },

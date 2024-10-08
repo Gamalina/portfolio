@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import WorkinProgress from '@/public/Workinprogress.jpg'
 
+
 export default function Portfolio() {
   const projects = [
     { title: 'Zombie Harvester Game', image: WorkinProgress, link: 'https://github.com/Gamalina/TCPEchoServer' },
