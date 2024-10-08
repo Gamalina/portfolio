@@ -47,10 +47,10 @@ export default function Hero() {
         />
         <div className="relative right-10 transform -translate-y-16 flex flex-col items-center z-10">
         <div className="space-y-4">
-          <a href="#" className="text-white hover:text-yellow-500 transition-colors">
+          <a href="https://linkedin.com/in/danielcallesen" className="text-white hover:text-yellow-500 transition-colors">
             <FaLinkedinIn size={30} />
           </a>
-          <a href="#" className="text-white hover:text-yellow-500 transition-colors">
+          <a href="https://github.com/Gamalina" className="text-white hover:text-yellow-500 transition-colors">
             <FaGithub size={30} />
           </a>
         </div>
