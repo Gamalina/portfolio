@@ -8,7 +8,7 @@ import { FaLinkedinIn,FaGithub } from 'react-icons/fa'
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gray-900 px-4 md:px-10 overflow-hidden">
+    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gray-900 px-4 md:px-10 overflow-hidden pt-10 md:pt-0">
       {/* Background Image */}
       <Image
         src={backgroundImage}
@@ -37,7 +37,7 @@ export default function Hero() {
         </button>
         </a>
       </div>
-      <div className="md:w-1/2 flex justify-center items-center mt-10 md:mt-0 z-10">
+      <div className="md:w-1/2 flex justify-center items-center mt-10 md:mt-0 z-10 pb-10 md:pt-0">
         <Image
           src={profilePic}
           alt="Daniel Rud Callesen"
