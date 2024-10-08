@@ -1,7 +1,10 @@
+
 import Image from 'next/image'
 import profilePic from '@/public/Me.jpg'
 import backgroundImage from '@/public/Background7.jpg' 
 import { FaLinkedinIn,FaGithub } from 'react-icons/fa'
+
+
 
 export default function Hero() {
   return (
@@ -28,9 +31,11 @@ export default function Hero() {
           software development lifecycle, from initial design to deployment and
           maintenance.
         </p>
+        <a href="#contact">
         <button className="bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-600 transition-colors">
           Contact Me!
         </button>
+        </a>
       </div>
       <div className="md:w-1/2 flex justify-center items-center mt-10 md:mt-0 z-10">
         <Image
