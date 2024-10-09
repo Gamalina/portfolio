@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useRef } from 'react'
-import Olga from '@/public/Mig_Olga.jpg'
+import Olga from '@/public/Migogolga.jpg'
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { amount: 0.2 })
