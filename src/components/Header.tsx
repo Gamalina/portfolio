@@ -36,13 +36,22 @@ export default function Header() {
         {isOpen && (
           <nav className="mobile-menu absolute right-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg py-2 z-20">
             <Link
-              href="#workexperience"
+              href="#about"
               className={`block px-4 py-2 text-sm ${
-                isActive('#workexperience') ? 'text-yellow-500' : 'text-white hover:text-yellow-500'
+                isActive('#about') ? 'text-yellow-500' : 'text-white hover:text-yellow-500'
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Experience
+              About
+            </Link>
+            <Link
+              href="#currentproject"
+              className={`block px-4 py-2 text-sm ${
+                isActive('#currentproject') ? 'text-yellow-500' : 'text-white hover:text-yellow-500'
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Current Project
             </Link>
             <Link
               href="#skills"
@@ -51,7 +60,7 @@ export default function Header() {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Skills
+              Skills & Software
             </Link>
             <Link
               href="#portfolio"
@@ -63,25 +72,33 @@ export default function Header() {
               Portfolio
             </Link>
             <Link
-              href="#contact"
+              href="#experience"
               className={`block px-4 py-2 text-sm ${
-                isActive('#contact') ? 'text-yellow-500' : 'text-white hover:text-yellow-500'
+                isActive('#experience') ? 'text-yellow-500' : 'text-white hover:text-yellow-500'
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              Experience
             </Link>
           </nav>
         )}
       </div>
       <nav className="hidden lg:flex flex-grow justify-end space-x-8">
         <Link
-          href="#workexperience"
+          href="#about"
           className={`hover:text-yellow-500 transition-colors pb-1 ${
-            isActive('#workexperience') ? 'border-b-2 border-yellow-500' : ''
+            isActive('#about') ? 'border-b-2 border-yellow-500' : ''
           }`}
         >
-          Experience
+          About
+        </Link>
+        <Link
+          href="#currentproject"
+          className={`hover:text-yellow-500 transition-colors pb-1 ${
+            isActive('#currentproject') ? 'border-b-2 border-yellow-500' : ''
+          }`}
+        >
+          Current Project
         </Link>
         <Link
           href="#skills"
@@ -89,7 +106,7 @@ export default function Header() {
             isActive('#skills') ? 'border-b-2 border-yellow-500' : ''
           }`}
         >
-          Skills
+          Skills & Software
         </Link>
         <Link
           href="#portfolio"
@@ -100,12 +117,12 @@ export default function Header() {
           Portfolio
         </Link>
         <Link
-          href="#contact"
+          href="#experience"
           className={`hover:text-yellow-500 transition-colors pb-1 ${
-            isActive('#contact') ? 'border-b-2 border-yellow-500' : ''
+            isActive('#experience') ? 'border-b-2 border-yellow-500' : ''
           }`}
         >
-          Contact
+          Experience
         </Link>
       </nav>
     </header>

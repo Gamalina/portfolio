@@ -1,6 +1,13 @@
+'use client'
+
 import { FaBriefcase, FaGraduationCap, FaCertificate } from 'react-icons/fa'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function ExperienceEducation() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, {amount: 0.3 })
+
   const experiences = [
     {
       title: "Internship",
@@ -14,6 +21,7 @@ export default function ExperienceEducation() {
       ]
     }
   ]
+
   const certificates = [
     {
       title: "Azure Fundamentals AZ-900",
@@ -21,7 +29,7 @@ export default function ExperienceEducation() {
       period: "May 2024 –  June 2024",
       details: [
         "Understanding cloud computing, its benefits and different cloud models.",
-        "An overview of Azure’s core services, including compute (VMs, Azure App Service), storage, networking, and databases.",
+        "An overview of Azure's core services, including compute (VMs, Azure App Service), storage, networking, and databases.",
         "Azure's security features, compliance standards, and shared responsibility model. Also learned about privacy policies and data governance.",
         "Basics of Azure pricing models, cost management, and available support plans.",
         "Intro to Azure management tools like Azure Portal, Azure CLI, and other core solutions like AI and machine learning, IoT, and DevOps."
@@ -53,21 +61,39 @@ export default function ExperienceEducation() {
   ]
 
   return (
-    <section id="workexperience"className="py-20 bg-gray-800">
+    <section id="experience" className="py-20 bg-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Experience & Education</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl font-bold mb-8 text-center text-white"
+        >
+          Experience & Education
+        </motion.h2>
         
         {/* Work Experience */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-4 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-12"
+        >
+          <h3 className="text-2xl font-semibold mb-4 flex items-center text-white">
             <FaBriefcase className="mr-2 text-yellow-500" />
             Work Experience
           </h3>
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-6">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              className="mb-6"
+            >
               <div className="flex items-center mb-2">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                <h4 className="text-xl font-semibold">{exp.title}</h4>
+                <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
               </div>
               <p className="text-gray-400 mb-2">{exp.company} | {exp.period}</p>
               <ul className="list-disc list-inside text-gray-300">
@@ -75,46 +101,67 @@ export default function ExperienceEducation() {
                   <li key={idx} className="mb-1">{detail}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
-{/* Certificates*/}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-4 flex items-center">
+        </motion.div>
+
+        {/* Certificates */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mb-12"
+        >
+          <h3 className="text-2xl font-semibold mb-4 flex items-center text-white">
             <FaCertificate className="mr-2 text-yellow-500" />
             Certificates
           </h3>
           {certificates.map((certi, index) => (
-            <div key={index} className="mb-6">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+              className="mb-6"
+            >
               <div className="flex items-center mb-2">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                <h4 className="text-xl font-semibold">{certi.title}</h4>
+                <h4 className="text-xl font-semibold text-white">{certi.title}</h4>
               </div>
               <p className="text-gray-400 mb-2">{certi.company} | {certi.period}</p>
-              <p className="mb-2 underline text-yellow-500"> 
-              <a href={certi.certiLink}className="mb-1">Certification Link</a>
+              <p className="mb-2"> 
+                <a href={certi.certiLink} className="underline text-yellow-500 hover:text-yellow-400 transition-colors">Certification Link</a>
               </p>
               <ul className="list-disc list-inside text-gray-300">
-                {certi.details.map((certi, idx) => (
-                  <li key={idx} className="mb-1">{certi}</li>
+                {certi.details.map((detail, idx) => (
+                  <li key={idx} className="mb-1">{detail}</li>
                 ))}
-                
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Education */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <h3 className="text-2xl font-semibold mb-4 flex items-center text-white">
             <FaGraduationCap className="mr-2 text-yellow-500" />
             Education
           </h3>
           {education.map((edu, index) => (
-            <div key={index} className="mb-6">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+              className="mb-6"
+            >
               <div className="flex items-center mb-2">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
               </div>
               <p className="text-gray-400 mb-2">{edu.institution} | {edu.period}</p>
               <ul className="list-disc list-inside text-gray-300">
@@ -122,9 +169,9 @@ export default function ExperienceEducation() {
                   <li key={idx} className="mb-1">{detail}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

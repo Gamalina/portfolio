@@ -7,6 +7,8 @@ const Portfolio = dynamic(() => import('@/components/Portfolio'))
 const Contact = dynamic(() => import('@/components/Contact'))
 const Footer = dynamic(() => import('@/components/Footer'))
 const Workexperience = dynamic(() => import('@/components/Workexperience'))
+const About = dynamic(() => import('@/components/About'))
+const CurrentProject = dynamic(() => import('@/components/CurrentProject'))
 
 
 export default function Home() {
@@ -14,10 +16,11 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
-      <Workexperience />
+      <About />
+      <CurrentProject />
       <Skills />
       <Portfolio />
-      <Contact />
+      <Workexperience />
       <Footer />
       </div>
   )
