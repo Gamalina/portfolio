@@ -1,13 +1,12 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Hero = dynamic(() => import('@/components/Hero'))
-const Skills = dynamic(() => import('@/components/Skills'))
-const Portfolio = dynamic(() => import('@/components/Portfolio'))
-const Footer = dynamic(() => import('@/components/Footer'))
-const Workexperience = dynamic(() => import('@/components/Workexperience'))
-const About = dynamic(() => import('@/components/About'))
-const CurrentProject = dynamic(() => import('@/components/CurrentProject'))
-
+const Hero = dynamic(() => import("@/components/Hero"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Portfolio = dynamic(() => import("@/components/Portfolio"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const Workexperience = dynamic(() => import("@/components/Workexperience"));
+const About = dynamic(() => import("@/components/About"));
+const CurrentProject = dynamic(() => import("@/components/CurrentProject"));
 
 export default function Home() {
   return (
@@ -19,6 +18,6 @@ export default function Home() {
       <Portfolio />
       <Workexperience />
       <Footer />
-      </div>
-  )
+    </div>
+  );
 }

@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import ContactForm from './Contactform'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ContactForm from "./Contactform";
 
 export default function Contact() {
   return (
@@ -14,18 +14,30 @@ export default function Contact() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
             <div className="flex space-x-6 mb-4">
-              <a href="https://linkedin.com/in/danielcallesen" className="text-2xl hover:text-yellow-500 transition-colors" aria-label="LinkedIn">
+              <a
+                href="https://linkedin.com/in/danielcallesen"
+                className="text-2xl hover:text-yellow-500 transition-colors"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/Gamalina" className="text-2xl hover:text-yellow-500 transition-colors" aria-label="GitHub">
+              <a
+                href="https://github.com/Gamalina"
+                className="text-2xl hover:text-yellow-500 transition-colors"
+                aria-label="GitHub"
+              >
                 <FaGithub />
               </a>
             </div>
-            <p className="text-gray-400">Feel free to reach out to me through any of these platforms.</p>
-            <p className="text-gray-400">I&apos;m always open to new opportunities and collaborations!</p>
+            <p className="text-gray-400">
+              Feel free to reach out to me through any of these platforms.
+            </p>
+            <p className="text-gray-400">
+              I&apos;m always open to new opportunities and collaborations!
+            </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,47 +1,51 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import WorkinProgress from '@/public/Workinprogress.jpg'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import GameImage from '@/public/Zombie_Harvester_Game.png' 
+import Image from "next/image";
+import WorkinProgress from "@/public/Workinprogress.jpg";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import GameImage from "@/public/Zombie_Harvester_Game.png";
 
 export default function Portfolio() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, {amount: 0.2 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2 });
 
   const projects = [
-    { 
-      title: 'Ecommerce Store', 
-      image: WorkinProgress, 
-      link: 'https://github.com/Gamalina/Nextjs-Ecommerce',
-      description: 'A full-stack ecommerce store with an admin panel. Built with Next.js, React, MongoDB, and TailwindCSS.'
-    }, 
-    { 
-      title: 'Zombie Harvester Game', 
-      image: GameImage, 
-      link: 'https://github.com/Gamalina/TCPEchoServer',
-      description: 'A thrilling game where players can defend against zombie attacks. Built with Unity and C#.'
+    {
+      title: "Ecommerce Store",
+      image: WorkinProgress,
+      link: "https://github.com/Gamalina/Nextjs-Ecommerce",
+      description:
+        "A full-stack ecommerce store with an admin panel. Built with Next.js, React, MongoDB, and TailwindCSS.",
     },
-    
-    { 
-      title: 'World of Warcraft API', 
-      image: WorkinProgress, 
-      link: 'https://github.com/Gamalina/WoW-Project',
-      description: 'An API integration project that fetches and displays World of Warcraft game data. Built with C# and .NET.'
+    {
+      title: "Zombie Harvester Game",
+      image: GameImage,
+      link: "https://github.com/Gamalina/TCPEchoServer",
+      description:
+        "A thrilling game where players can defend against zombie attacks. Built with Unity and C#.",
     },
-    { 
-      title: 'TCPEchoServer', 
-      image: WorkinProgress, 
-      link: 'https://github.com/Gamalina/TCPEchoServer',
-      description: 'A TCP server implementation that echoes back client messages. Demonstrates network programming skills in C#.'
+
+    {
+      title: "World of Warcraft API",
+      image: WorkinProgress,
+      link: "https://github.com/Gamalina/WoW-Project",
+      description:
+        "An API integration project that fetches and displays World of Warcraft game data. Built with C# and .NET.",
     },
-  ]
+    {
+      title: "TCPEchoServer",
+      image: WorkinProgress,
+      link: "https://github.com/Gamalina/TCPEchoServer",
+      description:
+        "A TCP server implementation that echoes back client messages. Demonstrates network programming skills in C#.",
+    },
+  ];
 
   return (
     <section id="portfolio" className="py-20 bg-gray-800" ref={ref}>
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
@@ -49,7 +53,7 @@ export default function Portfolio() {
         >
           Portfolio
         </motion.h2>
-        <motion.h4 
+        <motion.h4
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -57,7 +61,7 @@ export default function Portfolio() {
         >
           Work in Progress!
         </motion.h4>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -80,7 +84,9 @@ export default function Portfolio() {
               />
               <div className="p-4 flex-grow flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                 </div>
                 <a
@@ -97,5 +103,5 @@ export default function Portfolio() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

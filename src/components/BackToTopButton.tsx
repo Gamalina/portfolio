@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ButtonProps {
   onClick: () => void;
@@ -6,7 +6,11 @@ interface ButtonProps {
   className?: string;
 }
 
-export default function Button({ onClick, children, className = '' }: ButtonProps) {
+export default function Button({
+  onClick,
+  children,
+  className = "",
+}: ButtonProps) {
   return (
     <button
       onClick={onClick}
