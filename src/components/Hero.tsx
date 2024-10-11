@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gray-900 px-4 md:px-10 overflow-hidden pt-10 md:pt-0"
+      className="relative flex flex-col-reverse md:flex-row items-center justify-between min-h-screen bg-gray-900 px-4 md:px-10 overflow-hidden pt-10 md:pt-0"
       ref={ref}
     >
       <Image
@@ -35,7 +35,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.8 }}
-        className="md:w-1/2 z-10"
+        className="md:w-1/2 z-10 mt-10 md:mt-0"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-4 pb-10"
         >
           {[
             "About",
@@ -88,7 +88,7 @@ export default function Hero() {
         initial={{ opacity: 0, x: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="md:w-1/3 flex justify-center items-center mt-10 md:mt-0 z-10 pb-10 md:pt-0"
+        className="md:w-1/3 flex justify-start items-center md:mb-0 z-10 md:pt-0"
       >
         <Image
           src={profilePic}
