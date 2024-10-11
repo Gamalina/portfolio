@@ -107,18 +107,24 @@ export default function Hero() {
             <a
               href="https://linkedin.com/in/danielcallesen"
               className="text-white hover:text-yellow-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedinIn size={30} />
             </a>
             <a
               href="https://github.com/Gamalina"
               className="text-white hover:text-yellow-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub size={30} />
             </a>
             <a
               href="mailto:danielrudcallesen96@gmail.com"
               className="text-white hover:text-yellow-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaMailBulk size={30} />
             </a>

@@ -194,7 +194,8 @@ export default function Skills() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link href={skill.link}>
+              <Link href={skill.link} target="_blank"
+              rel="noopener noreferrer">
                 <div className="bg-gray-800 p-4 rounded-lg text-center flex flex-col items-center hover:bg-gray-700 transition-colors">
                   <Image
                     src={skill.icon}
@@ -202,6 +203,7 @@ export default function Skills() {
                     width={64}
                     height={64}
                     className="mb-2"
+                    
                   />
                   <p className="text-lg font-semibold text-white">
                     {skill.name}
@@ -239,7 +241,8 @@ export default function Skills() {
                 }
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               >
-                <Link href={sw.link}>
+                <Link href={sw.link} target="_blank"
+              rel="noopener noreferrer">
                   <div className="bg-gray-800 p-4 rounded-lg text-center flex flex-col items-center hover:bg-gray-700 transition-colors">
                     <Image
                       src={sw.icon}

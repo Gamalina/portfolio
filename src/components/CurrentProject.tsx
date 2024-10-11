@@ -85,12 +85,16 @@ export default function CurrentProject() {
               icon={<FaTrello className="text-3xl" />}
               text="Track project progress"
               label="Trello"
+              target="_blank"
+              rel="noopener noreferrer"
             />
             <ProjectLink
               href="https://github.com/Gamalina/Nextjs-Ecommerce"
               icon={<FaGithub className="text-3xl" />}
               text="View the code"
               label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </motion.div>
         </div>
@@ -107,6 +111,7 @@ export default function CurrentProject() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               className="bg-gray-700 p-6 rounded-lg shadow-lg flex flex-col items-center text-center"
+              
             >
               <div className="text-yellow-500 mb-4">{tech.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-white">
@@ -128,7 +133,16 @@ interface ProjectLinkProps {
   label: string;
 }
 
-function ProjectLink({ href, icon, text, label }: ProjectLinkProps) {
+interface ProjectLinkProps {
+  href: string;
+  icon: React.ReactNode;
+  text: string;
+  label: string;
+  target?: string;
+  rel?: string;
+}
+
+function ProjectLink({ href, icon, text, label, target, rel }: ProjectLinkProps) {
   return (
     <motion.a
       href={href}
@@ -136,6 +150,8 @@ function ProjectLink({ href, icon, text, label }: ProjectLinkProps) {
       aria-label={label}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      target={target}
+      rel={rel}
     >
       <div className="text-yellow-500 group-hover:text-yellow-400 transition-colors">
         {icon}

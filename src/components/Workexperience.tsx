@@ -152,6 +152,8 @@ export default function ExperienceEducation() {
                   <a
                     href={`mailto:${contactInfo.email}`}
                     className="text-gray-300 hover:text-yellow-500 transition-colors"
+                    target="_blank"
+              rel="noopener noreferrer"
                   >
                     {contactInfo.email}
                   </a>
@@ -219,6 +221,8 @@ export default function ExperienceEducation() {
                   <a
                     href={certi.certiLink}
                     className="underline text-yellow-500 hover:text-yellow-400 transition-colors"
+                    target="_blank"
+              rel="noopener noreferrer"
                   >
                     Certification Link
                   </a>
