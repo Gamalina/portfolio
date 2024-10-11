@@ -8,9 +8,16 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 export default function Hero() {
-
   const ref = useRef(null)
   const isInView = useInView(ref, { amount: 0.2 })
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gray-900 px-4 md:px-10 overflow-hidden pt-10 md:pt-0" ref={ref}>
       <Image
@@ -41,29 +48,34 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg mb-6 lg:w-[90%] text-white"
         >
-          A dedicated and enthusiastic Software Developer with experience in C# development and cloud technologies. Proficient in
-          Azure, API integration, and Agile methodologies. Possess a strong
-          foundation in computer science with hands-on experience in the entire
-          software development lifecycle, from initial design to deployment and
-          maintenance.
+          A dedicated Software Developer with experience in C# development and cloud technologies. Proficient in
+          Azure, API integration, and Agile methodologies. Hands-on experience in the entire
+          software development lifecycle, from initial design to deployment and maintenance.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-wrap gap-4"
         >
-          <a href="mailto:danielrudcallesen96@gmail.com">
-            <button className="bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-600 transition-colors">
-              Contact Me!
+          
+          {['About', 'Current Project', 'Skills & Software', 'Portfolio', 'Experience', 'Contact Me'].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section.toLowerCase().replace(/ /g, '-'))}
+              className="bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-600 transition-colors"
+            >
+              {section}
             </button>
-          </a>
+          ))}
+
         </motion.div>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, x: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="md:w-1/2 flex justify-center items-center mt-10 md:mt-0 z-10 pb-10 md:pt-0"
+        className="md:w-1/3 flex justify-center items-center mt-10 md:mt-0 z-10 pb-10 md:pt-0"
       >
         <Image
           src={profilePic}

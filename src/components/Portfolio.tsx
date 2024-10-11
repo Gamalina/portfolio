@@ -8,21 +8,22 @@ import GameImage from '@/public/Zombie_Harvester_Game.png'
 
 export default function Portfolio() {
   const ref = useRef(null)
-  const isInView = useInView(ref, {amount: 0.3 })
+  const isInView = useInView(ref, {amount: 0.2 })
 
   const projects = [
+    { 
+      title: 'Ecommerce Store', 
+      image: WorkinProgress, 
+      link: 'https://github.com/Gamalina/Nextjs-Ecommerce',
+      description: 'A full-stack ecommerce store with an admin panel. Built with Next.js, React, MongoDB, and TailwindCSS.'
+    }, 
     { 
       title: 'Zombie Harvester Game', 
       image: GameImage, 
       link: 'https://github.com/Gamalina/TCPEchoServer',
       description: 'A thrilling game where players can defend against zombie attacks. Built with Unity and C#.'
     },
-    { 
-      title: 'Ecommerce Store', 
-      image: WorkinProgress, 
-      link: 'https://github.com/Gamalina/Nextjs-Ecommerce',
-      description: 'A full-stack ecommerce store with an admin panel. Built with Next.js, React, MongoDB, and TailwindCSS.'
-    },
+    
     { 
       title: 'World of Warcraft API', 
       image: WorkinProgress, 
@@ -44,7 +45,7 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold mb-8 text-center text-white"
+          className="text-4xl font-bold mb-8 text-center text-yellow-500"
         >
           Portfolio
         </motion.h2>
@@ -60,7 +61,7 @@ export default function Portfolio() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6"
         >
           {projects.map((project, index) => (
             <motion.div

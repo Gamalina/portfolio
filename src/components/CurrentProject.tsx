@@ -5,27 +5,32 @@ import { SiNextdotjs, SiMongodb, SiTailwindcss } from 'react-icons/si'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
+
+
+
 export default function CurrentProject() {
+
   const ref = useRef(null)
   const isInView = useInView(ref, { amount: 0.2 })
 
+
   const technologies = [
-    { name: 'Next.js', icon: <SiNextdotjs className="text-4xl" />, description: 'React framework' },
     { name: 'React', icon: <FaReact className="text-4xl" />, description: 'JavaScript library for user interfaces' },
+    { name: 'Next.js', icon: <SiNextdotjs className="text-4xl" />, description: 'React framework' },
     { name: 'MongoDB', icon: <SiMongodb className="text-4xl" />, description: 'NoSQL database' },
     { name: 'TailwindCSS', icon: <SiTailwindcss className="text-4xl" />, description: 'CSS framework' },
   ]
 
   return (
-    <section id="currentproject" className="py-20 bg-gray-800" ref={ref}>
+    <section id="current-project" className="py-20 bg-gray-800" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold mb-12 text-center text-white"
+          className="text-4xl font-bold mb-12 text-center text-yellow-500"
         >
-          Current Project
+          Current Project - eCommerce Store E2E
         </motion.h2>
         <div className="md:flex md:justify-between md:items-start">
           <motion.div 
@@ -35,15 +40,15 @@ export default function CurrentProject() {
             className="text-gray-300 mb-8 md:w-2/3 space-y-4"
           >
             <p className="text-lg leading-relaxed">
-              This project involves building a full-stack e-commerce store with an admin panel, using Next.js, React, MongoDB, and TailwindCSS for styling.
+              This project involves building a <span className="text-yellow-500">full-stack</span> eCommerce store with an admin panel, using Next.js, React, MongoDB, and TailwindCSS for styling.
             </p>
             <p className="text-lg leading-relaxed">
-              The admin panel features a dashboard to track orders and revenue, alongside product and category management (add, edit, view, delete).
+              The <span className="text-yellow-500">admin panel</span> features a dashboard to track orders and revenue, alongside product and category <span className="text-yellow-500">management</span> (add, edit, view, delete).
               The order page allows you to view and mark orders as shipped.
             </p>
             <p className="text-lg leading-relaxed">
-              On the front end, users can explore featured products, add items to the cart, filter by category, and manage their orders and watchlist on the account page.
-              The cart page includes a checkout function with automatic price calculation.
+              On the <span className="text-yellow-500">front-end</span>, users can explore featured products, add items to the cart, <span className="text-yellow-500">filter</span> by category, and manage their orders and watchlist on the account page.
+              The cart page includes a checkout function with <span className="text-yellow-500">automatic price calculation.</span>
             </p>
           </motion.div>
           <motion.div 

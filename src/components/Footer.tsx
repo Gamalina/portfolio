@@ -1,4 +1,7 @@
 'use client'
+
+import Button from "./BackToTopButton";
+
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -10,12 +13,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Daniel Rud Callesen. All rights
           reserved.
         </p>
-        <button
-          onClick={scrollToTop}
-          className="mt-4 text-yellow-500 hover:text-yellow-400 transition-colors"
-        >
-          Back to Top
-        </button>
+        <Button onClick={scrollToTop}>Back to Top </Button>
       </div>
     </footer>
   );
