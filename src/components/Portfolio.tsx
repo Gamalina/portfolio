@@ -21,7 +21,7 @@ export default function Portfolio() {
     {
       title: "Zombie Harvester Game",
       image: GameImage,
-      link: "https://github.com/Gamalina/TCPEchoServer",
+      link: "https://github.com/Gamalina/Zombie-Harvester",
       description:
         "A thrilling game where players can defend against zombie attacks. Built with Unity and C#.",
     },
